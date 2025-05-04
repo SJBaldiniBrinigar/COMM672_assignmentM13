@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body, textarea {
     font-size: 16px;
     font-family: "Raleway", serif;
@@ -226,24 +230,26 @@ body.home {
     height: 80px;
     margin: auto;
 }
+
+/**  Old CSS Modal Styles
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1000; /* Sit on top */
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.7); 
 }
 .modal-content {
     position: relative;
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 15% auto; 
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 80%; 
 }
 .close-btn {
     color: #000;
@@ -261,6 +267,40 @@ body.home {
 .modal:target {
     display: block;
 }
+*/
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+  }
+  .modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+  }
+  .close {
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+  }
+  .close:hover {
+    color: orange;
+  }
+
+  .open-modal-btn {
+    border: none;
+  }
+
+
+  
 .careers-container {
     margin-bottom: 50px;
 }
@@ -343,6 +383,8 @@ ul.paw-list li::before {
     top: 0; 
     color: #333; 
 }
+
+/* Old Accordion Styles for CSS
 .accordion {
     max-width: 700px;
     margin: 0 auto;
@@ -382,7 +424,41 @@ ul.paw-list li::before {
 .accordion-checkbox:checked ~ .accordion-content {
     max-height: 200px;
     padding: 15px;
-}   
+}   */
+
+.accordion {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 30px;
+  }
+  
+  .accordion-item {
+    border-bottom: 1px solid #ddd;    
+    margin: 5px 0;
+  }
+  
+  .accordion-header {
+    background-color: #f9f9f9;
+    color: #;
+    padding: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+    font-weight: bold;
+  }
+  
+  .accordion-content {
+    display: none; /* Hidden by default */
+    padding: 15px;
+    background-color: #f9f9f9;
+  }
+  
+  .accordion-header:hover {
+    background-color: #eee;
+  }
 /**Contact**/
 .contact-container {
     display: flex;
@@ -490,6 +566,22 @@ footer img {
     .features-page .feature-page-block {
         width: 40%;
     }
+}
+
+#backToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+}
+
+#backToTopBtn:hover {
+    background-color: white;
+    color: #333;
 }
 
 /**Mobile Styles**/
